@@ -1,0 +1,55 @@
+<mvc:View controllerName="EHSM-Portal.controller.ViewFrom" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="app">
+		<pages  >
+			<Page title="WELCOME TO SAP WORLD"  >
+				<content>
+					<html:div class="homeHeader">
+						<html:h1>Let's start your ERP Journey with Us!</html:h1>
+					</html:div>
+				
+					<html:div class="p3-main">
+					
+						<html:div class="cont1">
+							<html:div class="item1 shape"  >
+								<html:img src="./images/mp_logo.png" class="item1-img2" alt=""></html:img>
+								<Text class="text5" text="Maintenance Portal"/>
+								<Text class="text4" text="Click the below button to login"/>
+								<Button text="Login" class="port-log-btnX" press="onPress"  />
+							</html:div>
+							<html:div class="item1 shape">
+								<html:img src="./images/qc_logo.png" class="item1-img2" alt=""></html:img>
+								<Text class="text5" text="Quality Check"/>
+								<Text class="text4" text="Click the below button to login"/>
+								<Button text="Login" class="port-log-btnX" press="onPress"  />
+							</html:div>
+							<html:div class="item1 shape">
+								<html:img src="./images/sf_logo.png" class="item1-img2" alt=""></html:img>
+								<Text class="text5" text="Shop Floor"/>
+								<Text class="text4" text="Click the below button to login"/>
+								<Button text="Login" class="port-log-btnX" press="onPress"  />
+							</html:div>
+							<html:div class="item1 shape">
+								<html:img src="./images/ehsm_logo.png" class="item1-img2" alt=""></html:img>
+								<Text class="text5" text="EHSM Portal"/>
+								<Text class="text4" text="Click the below button to login"/>
+								<Button text="Login" class="port-log-btnX" press="onPress"  />
+							</html:div>
+						</html:div>
+						
+				
+					</html:div>
+					
+				
+				</content>
+				<footer class="homeFooter">
+					<Bar>
+						<contentMiddle>
+							<Text class="text" text="Kaar Technologies.!.!.!.!."/>
+						</contentMiddle>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

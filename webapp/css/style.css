@@ -1,0 +1,70 @@
+/* Enter your custom styles here */
+.homeHeader{
+	font-size:1.4rem !important;
+	text-align:center !important;
+	color:white !important;
+	margin-left:0%;
+	padding:1%;
+	background-color: #008060;
+}
+
+.homeCards{
+	font-size:1.4rem !important;
+	text-align:center !important;
+	/*color:white !important;*/
+	/*margin:1%;*/
+	margin:3%;
+
+}
+
+
+.parent {
+    display: flex;
+}
+
+.child1 {
+    height: 30rem;
+    width: 50%;
+}
+
+.child2 {
+    height: 30rem;
+    width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+    }
+    .child1,
+    .child2 {
+        width: 100%;
+    }
+}
+
+.pn-login-image{
+	height:13rem;
+	width:13rem;
+	margin-left:20%;
+	/*background-image:url('../images/PM-login_image.png');*/
+	background-image:url('../images/sf_logo_login.png');
+	background-size: cover;
+	
+}
+
+
+.pm-cont{
+	font-size:2rem;
+	font-weight:700;
+	margin-left:10%;
+	color:black;
+}
+.pm-sub-cont{
+	margin-left:10%;
+	margin-top:1%;
+}
+.pm-sub-cont1{
+	margin-left:10%;
+	
+}

@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="EHSM-Portal.controller.Risk"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Risk" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<Table id="idOrdersTable" items="{notificationList>/results}" mode="SingleSelectMaster" selectionChange="action">
+						<headerToolbar>
+							<OverflowToolbar>
+								<Title text="Risk management"/>
+								<ToolbarSpacer/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="Actn"/>
+							</Column>
+							<Column>
+								<Text text="Rainvresult"/>
+							</Column>
+							<Column>
+								<Text text="Rem"/>
+							</Column>
+							<Column>
+								<Text text="Date"/>
+							</Column>
+							<Column>
+								<Text text="updateName"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Navigation">
+								<cells>
+									<Text text="{notificationList>Actn}"/>
+									<Text text="{notificationList>Eptype}"></Text>
+									<Text text="{notificationList>Rem}"></Text>
+									<Text text="{path : 'notificationList>Upddat', type : 'sap.ui.model.type.DateTime', formatOptions: { style : 'medium'}}"></Text>
+									<Text text="{notificationList>Updnam}"></Text>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

@@ -1,0 +1,38 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="EHSM-Portal.controller.ViewRes"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="DASHBOARD" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<ObjectHeader title="Click on the Below cards to View more ... " responsive="true" class="sapUiResponsivePadding--header">
+						<markers>
+							<ObjectMarker type="Favorite"/>
+							<ObjectMarker type="Flagged"/>
+						</markers>
+					</ObjectHeader>
+					<html:div class="p3-main">
+						<html:div class="cont1">
+							<html:div class="item1 shape">
+								<ImageContent src="sap-icon://activity-individual" class="item1-img22"/>
+								<Text class="text5" text="Incident Management"/>
+								<Button text="Click Here!" class="noti-btn" press="onIncident"/>
+							</html:div>
+							<html:div class="item1 shape">
+								<ImageContent src="sap-icon://alert" class="item1-img22"/>
+								<Text class="text5" text="Risk Assessment"/>
+								<Button text="Click Here!" class="noti-btn" press="onRisk"/>
+							</html:div>
+						</html:div>
+					</html:div>
+				</content>
+				<footer>
+					<Bar>
+						<contentMiddle>
+							<Text class="text" text="Kaar Technologies.!.!.!.!."/>
+						</contentMiddle>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

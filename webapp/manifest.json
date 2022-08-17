@@ -1,0 +1,220 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "EHSM-Portal",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZDS_MP_SRV": {
+				"uri": "/sap/opu/odata/sap/ZDS_MP_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			},
+			"ZDS_EHSM1_SRV": {
+				"uri": "/sap/opu/odata/sap/ZDS_EHSM1_SRV/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/ZDS_EHSM1_SRV/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+		]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "EHSM-Portal.view.ViewFrom",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "EHSM-Portal.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"targets": {
+				"TargetViewFrom": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": "true",
+					"viewName": "ViewFrom",
+					"viewLevel": 1
+				},
+				"TargetViewTo": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "ViewTo",
+					"viewLevel": 2
+				},
+				"TargetViewToParameter": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "ViewTo",
+					"viewLevel": 2
+				},
+				"TargetViewRes": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "ViewRes",
+					"viewLevel": 3
+				},
+				"TargetViewResParameter": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "ViewRes",
+					"viewLevel": 3
+				},
+				"TargetIncident": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Incident"
+				},
+				"TargetRisk": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Risk"
+				}
+			},
+			"routes": [
+				{
+					"name": "TargetViewFrom",
+					"pattern": "RouteViewFrom",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"TargetViewFrom"
+					]
+				},
+				{
+					"name": "TargetViewTo",
+					"pattern": "RouteViewTo",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"TargetViewTo"
+					]
+				},
+				{
+					"name": "TargetViewToParameter",
+					"pattern": "RouteViewTo/{parameter}",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"TargetViewToParameter"
+					]
+				},
+				{
+					"name": "TargetViewRes",
+					"pattern": "RouteViewRes",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"TargetViewRes"
+					]
+				},
+				{
+					"name": "TargetViewResParameter",
+					"pattern": "RouteViewRes/{parameter}",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"TargetViewResParameter"
+					]
+				},
+				{
+					"name": "TargetIncident",
+					"pattern": "RouteIncident",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"TargetIncident"
+					]
+				},
+				{
+					"name": "TargetRisk",
+					"pattern": "RouteRisk",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"TargetRisk"
+					]
+				}
+			],
+			"config": {
+				"viewPath": "EHSM-Portal.view",
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false,
+				"bypassed": {
+					"target": []
+				}
+			}
+		}
+	}
+}

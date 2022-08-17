@@ -1,0 +1,64 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="EHSM-Portal.controller.ViewTo"
+	xmlns:tnt="sap.tnt" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="LOGIN PAGE">
+				<content>
+					<html:div class="content">
+						<tnt:ToolHeader>
+							<Button icon="sap-icon://nav-back" type="Transparent" press="onNavBack"></Button>
+							<html:Text class="text1">/ Add your respective Username and Password to login into system.</html:Text>
+						</tnt:ToolHeader>
+						<!--<html:div class="background1"></html:div>-->
+						<!--<VBox class="background">-->
+						<!--	<VBox class="centerelements">-->
+						<!--		<VBox class="pn-login-image1"></VBox>-->
+						<!--	</VBox>-->
+						<!--<VBox class="login-box">-->
+						<!--	<VBox class="login-box-cont">-->
+						<!--		<Label class="lable1" text="User ID*"/>-->
+						<!--		<Input id="id" class="input1" width="15rem"/>-->
+						<!--		<Label class="lable" text="Password*"/>-->
+						<!--		<Input id="pwd" class="input" width="15rem" type="Password"/>-->
+						<!--		<Button class="button" width="7rem" text="Login" type="Emphasized" press="onNext1"/>-->
+						<!--	</VBox>-->
+						<!--</VBox>-->
+						<!--	<html:br></html:br>-->
+						<!--</VBox>-->
+						<html:div class="parent">
+							<html:div class="child1">
+								<html:div class="centerelements">
+									<html:div class="pn-login-image"></html:div>
+									<html:h1 class="pm-cont">Welcome to EHSM Portal</html:h1>
+									<html:p class="pm-sub-cont">
+										Safety Engineer Portal needs to be designed and developed to have</html:p>
+									<html:p class="pm-sub-cont1">Incident Management and Risk Assessment carried out</html:p>
+									<html:p class="pm-sub-cont">in an enterprise.</html:p>
+								</html:div>
+							</html:div>
+							<html:div class="child2">
+								<html:h1>Login here!</html:h1>
+								<VBox class="login-box">
+									<VBox class="login-box-cont">
+										<Label class="lable1" text="User ID*"/>
+										<Input id="user" class="input1" width="15rem"/>
+										<Label class="lable" text="Password*"/>
+										<Input id="pass" class="input" width="15rem" type="Password"/>
+										<Button class="button" width="7rem" text="Login" type="Emphasized" press="onPress"/>
+									</VBox>
+								</VBox>
+							</html:div>
+						</html:div>
+					</html:div>
+				</content>
+				<footer>
+					<Bar>
+						<contentMiddle>
+							<Text class="text" text="Kaar Technologies.!.!.!.!."/>
+						</contentMiddle>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
